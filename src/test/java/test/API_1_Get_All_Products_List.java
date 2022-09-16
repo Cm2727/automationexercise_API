@@ -20,6 +20,7 @@ Response JSON: All products list
     public void api1() {
         spec.pathParams("1", "api", "2","productsList");
         Response response = given().spec(spec).get("/{1}/{2}");
+
         response.jsonPath().prettyPrint();
         response.then().assertThat().statusCode(200);
 
